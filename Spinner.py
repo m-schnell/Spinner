@@ -5,7 +5,7 @@ def update_spinner():
     try:
         percentage = float(percentage_entry.get())
         if 0 <= percentage <= 100:
-            if percentage == 100: # special case because the extent is equal to the start at 360 degrees
+            if percentage == 100: # Special case because the extent is equal to the start at 360 degrees
                 canvas.itemconfig(pie_slice, extent=359.99999)
             else:
                 angle = -(360 * percentage / 100)  # Convert percentage to angle
@@ -35,7 +35,6 @@ pie_slice = canvas.create_arc(50, 50, 150, 150, start=90, extent=0, fill="yellow
 # Create an arrow
 canvas.create_line(100, 50, 100, 100, width=2)
 canvas.create_polygon(95, 60, 100, 50, 105, 60, fill="black")
-#canvas.create_polygon(95, 30, 100, 20, 105, 30, fill="black")
 
 # Create a text box to enter the percentage
 percentage_label = tk.Label(root, text="Enter Percentage:")
